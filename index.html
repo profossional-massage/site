@@ -15,7 +15,7 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            background-color: #FAF7F2;
+            background-color: #FAF7F2; /* Приятный фон */
             color: #333;
         }
 
@@ -28,18 +28,18 @@
 
         .header-flex {
             display: flex;
-            flex-direction: column;
+            flex-direction: column; /* Текст под фото */
             align-items: center;
         }
 
         .header-right {
-            text-align: center;
+            text-align: center; /* Центрирование текста */
             margin-top: 10px;
         }
 
         .header-right h1 {
             font-size: 2em;
-            margin-bottom: 15px;
+            margin-bottom: 15px; /* Расстояние между заголовком и параграфом */
         }
 
         .header-right p {
@@ -121,62 +121,29 @@
             transform: scale(1.1);
         }
 
-        /* ===== FULLSCREEN GALLERY ===== */
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.9);
-            overflow: hidden;
+        blockquote {
+            background-color: #f9f9f9;
+            border-left: 4px solid #333;
+            padding: 15px;
+            margin: 15px 0;
+            font-style: italic;
+            border-radius: 5px;
         }
 
-        .modal-content {
-            margin: auto;
-            display: block;
-            max-width: 90%;
-            max-height: 80vh;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 35px;
-            color: #fff;
-            font-size: 40px;
+        blockquote footer {
+            text-align: right;
             font-weight: bold;
-            cursor: pointer;
-            z-index: 10000;
         }
 
-        .nav {
-            position: absolute;
-            top: 50%;
-            font-size: 50px;
+        /* ===== FOOTER ===== */
+        footer {
+            background: #333;
             color: white;
-            cursor: pointer;
-            padding: 10px;
-            user-select: none;
-            transform: translateY(-50%);
-            z-index: 10000;
+            text-align: center;
+            padding: 10px 0;
         }
 
-        .nav.left {
-            left: 20px;
-        }
-
-        .nav.right {
-            right: 20px;
-        }
-
+        /* ===== MOBILE ===== */
         @media (max-width: 768px) {
             .header-right h1 {
                 margin-bottom: 20px;
@@ -249,7 +216,7 @@
             </div>
 
             <div class="service">
-                <h3>Спортивный массаж</h3>
+            <h3>Спортивный массаж</h3>
                 <p class="details">— <strong>30 000₸</strong></p>
             </div>
 
@@ -284,78 +251,28 @@
     <section id="contact">
         <div class="container">
             <h2>Контакты</h2>
+
             <p><strong>Телефон:</strong> +7 (776) 022 5392</p>
-            <p><strong>WhatsApp:</strong> <a href="https://wa.me/77760225392" target="_blank">Записаться</a></p>
+
+            <p><strong>Instagram:</strong> 
+                <a href="https://www.instagram.com/massage.konstantin_?igsh=MWNzZzl3c2QwZHZyaQ==" 
+                   target="_blank" rel="noopener noreferrer">
+                    @massage.konstantin_
+                </a>
+            </p>
+
+            <p><strong>WhatsApp:</strong> 
+                <a href="https://wa.me/77760225392" target="_blank">Записаться</a>
+            </p>
         </div>
     </section>
 
-    <!-- FULLSCREEN GALLERY MODAL -->
-    <div id="galleryModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modalImage">
-        <div class="nav left">&#10094;</div>
-        <div class="nav right">&#10095;</div>
-    </div>
-
-    <!-- JavaScript -->
-    <script>
-        const images = document.querySelectorAll('#reviews .review-photos img');
-        const modal = document.getElementById('galleryModal');
-        const modalImg = document.getElementById('modalImage');
-
-        const closeBtn = document.querySelector(".close");
-        const prevBtn = document.querySelector(".nav.left");
-        const nextBtn = document.querySelector(".nav.right");
-
-        let currentIndex = 0;
-
-        // Открытие модального окна
-        images.forEach((img, index) => {
-            img.addEventListener("click", () => {
-                currentIndex = index;
-                showImage();
-                modal.style.display = "block";
-            });
-        });
-
-        function showImage() {
-            modalImg.src = images[currentIndex].src;
-        }
-
-        // Закрытие
-        closeBtn.onclick = () => modal.style.display = "none";
-        modal.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
-
-        // Стрелки
-        nextBtn.onclick = () => {
-            currentIndex = (currentIndex + 1) % images.length;
-            showImage();
-        };
-
-        prevBtn.onclick = () => {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            showImage();
-        };
-
-        // ===== SWIPE на мобильных =====
-        let startX = 0;
-
-        modalImg.addEventListener("touchstart", e => {
-            startX = e.touches[0].clientX;
-        });
-
-        modalImg.addEventListener("touchend", e => {
-            let endX = e.changedTouches[0].clientX;
-
-            if (endX - startX > 50) {
-                currentIndex = (currentIndex - 1 + images.length) % images.length;
-                showImage();
-            } else if (startX - endX > 50) {
-                currentIndex = (currentIndex + 1) % images.length;
-                showImage();
-            }
-        });
-    </script>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Иван Иванов. Все права защищены.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
