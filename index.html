@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Массажист</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #FAF7F2;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            background: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* Фото с рамкой */
+        .header-photo {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 5px solid white; /* Рамка */
+            box-shadow: 0 0 12px rgba(0,0,0,0.25); /* Тень */
+            margin-bottom: 15px;
+        }
+
+        .header-right {
+            margin-left: 20px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 40px 0;
+            background: #fff;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .service {
+            background: #f9f9f9;
+            padding: 20px;
+            border-left: 4px solid #333;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        /* ФОТО ОТЗЫВОВ (квадраты) */
+        .review-photos {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .review-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            border: 4px solid white;
+        }
+
+        .review-img:hover {
+            transform: scale(1.05);
+        }
+
+        /* ===== МОДАЛКА (ГАЛЕРЕЯ) ===== */
+        #imgModal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            justify-content: center;
+            align-items: center;
+        }
+
+        #modalImg {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+            user-select: none;
+            padding: 10px;
+        }
+
+        .arrow:hover {
+            color: #ddd;
+        }
+
+        #leftArrow { left: 20px; }
+        #rightArrow { right: 20px; }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container header-flex">
+
+            <img src="qwertyy.jpg" alt="Фото массажиста" class="header-photo">
+
+            <div class="header-right">
+                <h1>Клейкин Константин Александрович</h1>
+                <p>Профессиональный массажист</p>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- ОБО МНЕ -->
+    <section>
+        <div class="container">
+            <h2>Обо мне</h2>
+            <p>Профессиональный массажист c медицинским образованием и 7-летним опытом.
+Специализируюсь на восстановлении после травм и работе с заболеваниями опорно-двигательного аппарата. Применяю индивидуальный комплекс массажных техник для безопасного и стабильного результата. Помогаю уменьшить боль, снять мышечные блоки и вернуть подвижность без медикаментов и операций.</p>
+        </div>
+    </section>
+
+    <!-- УСЛУГИ -->
+    <section>
+        <div class="container">
+            <h2>Мои услуги</h2>
+
+            <div class="service"><h3>Общий массаж</h3><p>90 мин — <strong>25 000₸</strong></p></div>
+            <div class="service"><h3>Спина</h3><p><strong>15 000₸</strong></p></div>
+            <div class="service"><h3>Руки, ноги</h3><p><strong>8 000₸</strong></p></div>
+            <div class="service"><h3>Висцеральный массаж</h3><p><strong>15 000₸</strong></p></div>
+            <div class="service"><h3>Голова</h3><p><strong>5 000₸</strong></p></div>
+            <div class="service"><h3>Классический массаж</h3><p><strong>20 000₸</strong></p></div>
+            <div class="service"><h3>Спортивный массаж</h3><p><strong>30 000₸</strong></p></div>
+            <div class="service"><h3>Лимфодренажный массаж</h3><p><strong>20 000₸</strong></p></div>
+            <div class="service"><h3>Расслабляющий массаж</h3><p><strong>25 000₸</strong></p></div>
+
+        </div>
+    </section>
+
+    <!-- ОТЗЫВЫ -->
+    <section id="reviews">
+        <div class="container">
+            <h2>Отзывы</h2>
+
+            <div class="review-photos">
+                <img src="asdz.jpg" class="review-img">
+                <img src="qw.jpg" class="review-img">
+                <img src="we.jpg" class="review-img">
+                <img src="wed.jpg" class="review-img">
+                <img src="wer.jpg" class="review-img">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- КОНТАКТЫ -->
+    <section id="contact">
+        <div class="container">
+            <h2>Контакты</h2>
+            <p><strong>Телефон:</strong> +7 (776) 022 5392</p>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/77760225392" target="_blank">Записаться</a></p>
+        </div>
+    </section>
+
+    <!-- ===== МОДАЛКА ГАЛЕРЕИ ===== -->
+    <div id="imgModal">
+        <span id="leftArrow" class="arrow">&#10094;</span>
+        <img id="modalImg" src="">
+        <span id="rightArrow" class="arrow">&#10095;</span>
+    </div>
+
+    <!-- ===== СКРИПТ ГАЛЕРЕИ СО СВАЙПАМИ ===== -->
+    <script>
+        const modal = document.getElementById("imgModal");
+        const modalImg = document.getElementById("modalImg");
+        const images = Array.from(document.querySelectorAll(".review-img"));
+        let currentIndex = 0;
+
+        function openModal(index) {
+            currentIndex = index;
+            modalImg.src = images[currentIndex].src;
+            modal.style.display = "flex";
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        function nextImg() {
+            currentIndex = (currentIndex + 1) % images.length;
+            modalImg.src = images[currentIndex].src;
+        }
+
+        function prevImg() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            modalImg.src = images[currentIndex].src;
+        }
+
+        images.forEach((img, index) => {
+            img.addEventListener("click", () => openModal(index));
+        });
+
+        modal.addEventListener("click", (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        document.getElementById("rightArrow").onclick = nextImg;
+        document.getElementById("leftArrow").onclick = prevImg;
+
+        let startX = 0;
+
+        modal.addEventListener("touchstart", (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        modal.addEventListener("touchend", (e) => {
+            let endX = e.changedTouches[0].clientX;
+            if (startX - endX > 50) nextImg();
+            if (endX - startX > 50) prevImg();
+        });
+    </script>
+
+</body>
+</html>

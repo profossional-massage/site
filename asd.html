@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Массажист</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: #333;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .header-right {
+            text-align: left;
+        }
+
+        /* Фото */
+        .header-photo-rect {
+            width: 180px;
+            height: auto;
+            display: block;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .header-right h1 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+
+        .header-right p {
+            font-size: 1.1em;
+            margin: 3px 0;
+        }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* ===== SECTIONS ===== */
+        section {
+            padding: 40px 0;
+            background-color: #fff;
+            margin-bottom: 20px;
+        }
+
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        /* ===== SERVICES ===== */
+        .service {
+            background: #f9f9f9;
+            padding: 20px;
+            border-left: 4px solid #333;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .service h3 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .service .details {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .service .desc {
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+
+        /* ===== REVIEWS ===== */
+        blockquote {
+            background-color: #f9f9f9;
+            border-left: 4px solid #333;
+            padding: 15px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+
+        blockquote footer {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container header-flex">
+            <div class="empty"></div>
+
+            <div class="header-right">
+                <img src="qwerty.jpeg" alt="Фото массажиста" class="header-photo-rect">
+
+                <h1>Клейкин Константин Александрович</h1>
+                <p>Профессиональный массажист</p>
+                <p>Телефон: <strong>+7 (776) 022 5392</strong></p>
+            </div>
+        </div>
+    </header>
+
+    <!-- ОБО МНЕ -->
+    <section id="about">
+        <div class="container">
+            <h2>Обо мне</h2>
+            <p>Профессиональный массажист c медицинским образованием и 7-летним опытом.
+            Специализируюсь на восстановлении после травм и работе с заболеваниями опорно-двигательного аппарата. Применяю индивидуальный комплекс массажных техник для безопасного и стабильного результата. Помогаю уменьшить боль, снять мышечные блоки и вернуть подвижность без медикаментов и операций.</p>
+        </div>
+    </section>
+
+    <!-- УСЛУГИ -->
+    <section id="services">
+        <div class="container">
+            <h2>Мои услуги</h2>
+
+            <div class="service">
+                <h3>Общий массаж</h3>
+                <p class="details">90 мин. — <strong>25 000₸</strong></p>
+                <p class="desc">Сюда входят дополнительно элементы проработки проблемных зон.</p>
+            </div>
+
+            <div class="service">
+                <h3>Спина</h3>
+                <p class="details">— <strong>15 000₸</strong></p>
+            </div>
+
+            <div class="service">
+                <h3>Руки, ноги</h3>
+                <p class="details">— <strong>8 000₸</strong></p>
+            </div>
+
+            <div class="service">
+                <h3>Висцеральный массаж</h3>
+                <p class="details">— <strong>15 000₸</strong></p>
+            </div>
+
+            <div class="service">
+                <h3>Голова</h3>
+                <p class="details">— <strong>5 000₸</strong></p>
+            </div>
+
+            <div class="service">
+                <h3>Классический массаж</h3>
+                <p class="details">60 мин. — <strong>20 000₸</strong></p>
+            </div>
+
+            <div class="service">
+                <h3>Спортивный массаж</h3>
+                <p class="details">— <strong>30 000₸</strong></p>
+            </div>
+
+            <div class="service">
+                <h3>Лимфодренажный массаж</h3>
+                <p class="details">— <strong>20 000₸</strong></p>
+            </div>
+
+            <div class="service">
+                <h3>Расслабляющий массаж</h3>
+                <p class="details">90 мин. — <strong>25 000₸</strong></p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ОТЗЫВЫ -->
+    <section id="reviews">
+        <div class="container">
+            <h2>Отзывы</h2>
+
+            <blockquote>
+                <p>"После первого сеанса почувствовала лёгкость и расслабление. Очень рекомендую!"</p>
+                <footer>- Мария</footer>
+            </blockquote>
+
+            <blockquote>
+                <p>"Грамотный специалист. После массажа спины почувствовал огромную разницу."</p>
+                <footer>- Дмитрий</footer>
+            </blockquote>
+
+        </div>
+    </section>
+
+    <!-- КОНТАКТЫ -->
+    <section id="contact">
+        <div class="container">
+            <h2>Контакты</h2>
+            <p><strong>Телефон:</strong> +7 (776) 022 5392</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Иван Иванов. Все права защищены.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
