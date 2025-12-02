@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Массажист</title>
 
+    <!-- Lightbox2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet"/>
+
     <style>
         * {
             margin: 0;
@@ -15,11 +18,10 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            background-color: #FAF7F2; /* Приятный фон */
+            background-color: #FAF7F2;
             color: #333;
         }
 
-        /* ===== HEADER ===== */
         header {
             background: #333;
             color: white;
@@ -28,18 +30,18 @@
 
         .header-flex {
             display: flex;
-            flex-direction: column; /* Текст под фото */
+            flex-direction: column;
             align-items: center;
         }
 
         .header-right {
-            text-align: center; /* Центрирование текста */
+            text-align: center;
             margin-top: 10px;
         }
 
         .header-right h1 {
             font-size: 2em;
-            margin-bottom: 15px; /* Расстояние между заголовком и параграфом */
+            margin-bottom: 15px;
         }
 
         .header-right p {
@@ -54,13 +56,11 @@
             border: 3px solid #333;
         }
 
-        /* ===== CONTAINER ===== */
         .container {
             width: 80%;
             margin: 0 auto;
         }
 
-        /* ===== SECTIONS ===== */
         section {
             padding: 40px 0;
             background-color: #fff;
@@ -71,10 +71,8 @@
         section h2 {
             font-size: 2em;
             margin-bottom: 15px;
-            color: #333;
         }
 
-        /* ===== SERVICES ===== */
         .service {
             background: #f9f9f9;
             padding: 20px;
@@ -94,12 +92,6 @@
             margin-bottom: 10px;
         }
 
-        .service .desc {
-            font-size: 1.1em;
-            line-height: 1.5;
-        }
-
-        /* ===== REVIEWS ===== */
         .review-photos {
             display: flex;
             flex-wrap: wrap;
@@ -121,21 +113,6 @@
             transform: scale(1.1);
         }
 
-        blockquote {
-            background-color: #f9f9f9;
-            border-left: 4px solid #333;
-            padding: 15px;
-            margin: 15px 0;
-            font-style: italic;
-            border-radius: 5px;
-        }
-
-        blockquote footer {
-            text-align: right;
-            font-weight: bold;
-        }
-
-        /* ===== FOOTER ===== */
         footer {
             background: #333;
             color: white;
@@ -143,136 +120,91 @@
             padding: 10px 0;
         }
 
-        /* ===== MOBILE ===== */
         @media (max-width: 768px) {
-            .header-right h1 {
-                margin-bottom: 20px;
-            }
-
             .review-photos img {
                 width: 80px;
                 height: 80px;
             }
         }
     </style>
-
 </head>
+
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div class="container header-flex">
-            <img src="qwertyy.jpg" alt="Фото массажиста" class="header-photo">
-            <div class="header-right">
-                <h1>Клейкин Константин Александрович</h1>
-                <p>Профессиональный массажист</p>
-            </div>
+<header>
+    <div class="container header-flex">
+        <img src="qwertyy.jpg" alt="Фото массажиста" class="header-photo">
+        <div class="header-right">
+            <h1>Клейкин Константин Александрович</h1>
+            <p>Профессиональный массажист</p>
         </div>
-    </header>
+    </div>
+</header>
 
-    <!-- ОБО МНЕ -->
-    <section id="about">
-        <div class="container">
-            <h2>Обо мне</h2>
-            <p>Профессиональный массажист c медицинским образованием и 7-летним опытом.
-            Специализируюсь на восстановлении после травм и работе с заболеваниями опорно-двигательного аппарата. Применяю индивидуальный комплекс массажных техник для безопасного и стабильного результата. Помогаю уменьшить боль, снять мышечные блоки и вернуть подвижность без медикаментов и операций.</p>
+<section id="about">
+    <div class="container">
+        <h2>Обо мне</h2>
+        <p>Профессиональный массажист c медицинским образованием и 7-летним опытом.
+        Специализируюсь на восстановлении после травм и работе с заболеваниями опорно-двигательного аппарата.</p>
+    </div>
+</section>
+
+<section id="services">
+    <div class="container">
+        <h2>Мои услуги</h2>
+
+        <div class="service"><h3>Общий массаж</h3><p class="details">90 мин. — <strong>25 000₸</strong></p></div>
+        <div class="service"><h3>Спина</h3><p class="details">— <strong>15 000₸</strong></p></div>
+        <div class="service"><h3>Руки, ноги</h3><p class="details">— <strong>8 000₸</strong></p></div>
+        <div class="service"><h3>Висцеральный массаж</h3><p class="details">— <strong>15 000₸</strong></p></div>
+        <div class="service"><h3>Голова</h3><p class="details">— <strong>5 000₸</strong></p></div>
+        <div class="service"><h3>Классический массаж</h3><p class="details">60 мин. — <strong>20 000₸</strong></p></div>
+        <div class="service"><h3>Спортивный массаж</h3><p class="details">— <strong>30 000₸</strong></p></div>
+        <div class="service"><h3>Лимфодренажный массаж</h3><p class="details">— <strong>20 000₸</strong></p></div>
+        <div class="service"><h3>Расслабляющий массаж</h3><p class="details">90 мин. — <strong>25 000₸</strong></p></div>
+    </div>
+</section>
+
+<section id="reviews">
+    <div class="container">
+        <h2>Отзывы</h2>
+
+        <div class="review-photos">
+            <a href="asdz.jpg" data-lightbox="reviews"><img src="asdz.jpg"></a>
+            <a href="qw.jpg" data-lightbox="reviews"><img src="qw.jpg"></a>
+            <a href="we.jpg" data-lightbox="reviews"><img src="we.jpg"></a>
+            <a href="wed.jpg" data-lightbox="reviews"><img src="wed.jpg"></a>
+            <a href="wer.jpg" data-lightbox="reviews"><img src="wer.jpg"></a>
         </div>
-    </section>
 
-    <!-- УСЛУГИ -->
-    <section id="services">
-        <div class="container">
-            <h2>Мои услуги</h2>
+    </div>
+</section>
 
-            <div class="service">
-                <h3>Общий массаж</h3>
-                <p class="details">90 мин. — <strong>25 000₸</strong></p>
-                <p class="desc">Сюда входят дополнительно элементы проработки проблемных зон.</p>
-            </div>
+<section id="contact">
+    <div class="container">
+        <h2>Контакты</h2>
 
-            <div class="service">
-                <h3>Спина</h3>
-                <p class="details">— <strong>15 000₸</strong></p>
-            </div>
+        <p><strong>Телефон:</strong> +7 (776) 022 5392</p>
 
-            <div class="service">
-                <h3>Руки, ноги</h3>
-                <p class="details">— <strong>8 000₸</strong></p>
-            </div>
+        <p><strong>Instagram:</strong>
+            <a href="https://www.instagram.com/massage.konstantin_?igsh=MWNzZzl3c2QwZHZyaQ=="
+               target="_blank">@massage.konstantin_</a>
+        </p>
 
-            <div class="service">
-                <h3>Висцеральный массаж</h3>
-                <p class="details">— <strong>15 000₸</strong></p>
-            </div>
+        <p><strong>WhatsApp:</strong>
+            <a href="https://wa.me/77760225392" target="_blank">Записаться</a>
+        </p>
+    </div>
+</section>
 
-            <div class="service">
-                <h3>Голова</h3>
-                <p class="details">— <strong>5 000₸</strong></p>
-            </div>
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Иван Иванов. Все права защищены.</p>
+    </div>
+</footer>
 
-            <div class="service">
-                <h3>Классический массаж</h3>
-                <p class="details">60 мин. — <strong>20 000₸</strong></p>
-            </div>
-
-            <div class="service">
-            <h3>Спортивный массаж</h3>
-                <p class="details">— <strong>30 000₸</strong></p>
-            </div>
-
-            <div class="service">
-                <h3>Лимфодренажный массаж</h3>
-                <p class="details">— <strong>20 000₸</strong></p>
-            </div>
-
-            <div class="service">
-                <h3>Расслабляющий массаж</h3>
-                <p class="details">90 мин. — <strong>25 000₸</strong></p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ОТЗЫВЫ -->
-    <section id="reviews">
-        <div class="container">
-            <h2>Отзывы</h2>
-            <div class="review-photos">
-                <img src="asdz.jpg" alt="Отзыв 1">
-                <img src="qw.jpg" alt="Отзыв 2">
-                <img src="we.jpg" alt="Отзыв 3">
-                <img src="wed.jpg" alt="Отзыв 4">
-                <img src="wer.jpg" alt="Отзыв 5">
-            </div>
-        </div>
-    </section>
-
-    <!-- КОНТАКТЫ -->
-    <section id="contact">
-        <div class="container">
-            <h2>Контакты</h2>
-
-            <p><strong>Телефон:</strong> +7 (776) 022 5392</p>
-
-            <p><strong>Instagram:</strong> 
-                <a href="https://www.instagram.com/massage.konstantin_?igsh=MWNzZzl3c2QwZHZyaQ==" 
-                   target="_blank" rel="noopener noreferrer">
-                    @massage.konstantin_
-                </a>
-            </p>
-
-            <p><strong>WhatsApp:</strong> 
-                <a href="https://wa.me/77760225392" target="_blank">Записаться</a>
-            </p>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Иван Иванов. Все права защищены.</p>
-        </div>
-    </footer>
+<!-- Lightbox2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox-plus-jquery.min.js"></script>
 
 </body>
 </html>
